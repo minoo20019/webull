@@ -7,7 +7,7 @@ class urls :
         self.base_quote_url = 'https://quoteapi.webullbroker.com/api'
         self.base_securities_url = 'https://securitiesapi.webullbroker.com/api'
         self.base_trade_url = 'https://tradeapi.webullbroker.com/api/trade'
-        self.base_user_url = 'https://userapi.webull.com/api'
+        self.base_user_url = 'https://u1suser.webullfintech.com/'
         self.base_userbroker_url = 'https://userapi.webullbroker.com/api'
         self.base_ustrade_url = 'https://ustrade.webullfinance.com/api'
         self.base_paperfintech_url = 'https://act.webullfintech.com/webull-paper-center/api'
@@ -90,7 +90,7 @@ class urls :
         return f'{self.base_userbroker_url}/user/warning/v2/query/tickers'
 
     def login(self):
-        return f'{self.base_user_url}/passport/login/v5/account'
+        return f'{self.base_user_url}/api/user/v1/login/account/v2'
 
     def get_mfa(self) :
         return f'{self.base_userfintech_url}/passport/v2/verificationCode/send'
